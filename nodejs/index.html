@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#test").click(function(){
+    	var id = 1
+        $.ajax({url: "http://localhost:1200/customer/"+id, success: function(result){
+        	var result = JSON.parse(result);
+        	console.log(result);
+            $("#div1").html(result[0].Name);
+            
+        }});
+    });
+});
+</script>
+</head>
+<body>
+
+Namannya adalah : <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+
+<button id="test">Get External Content</button>
+
+nama : <input id="nama" type="text" name="nama">
+Address : <input id="nama" type="text" name="nama">
+Country  : <input id="nama" type="text" name="nama">
+Phon e: <input id="nama" type="text" name="nama">
+
+</body>
+</html>
