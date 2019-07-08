@@ -4,6 +4,7 @@
 include ('Db/connect.php'); 
  include 'wa.php';
 
+ // perubahan
 
 if(isset($_GET['terima_CBDO'])){
            $nmr_karyawan = $_GET['telpon'];
