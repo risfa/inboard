@@ -2,6 +2,7 @@
 <?php include 'inc/template_start.php'; ?>
 <?php include 'inc/page_head.php';
 include ('Db/connect.php');
+// perubahan lagi
 
   $dataKaryawan = mysql_query("SELECT COUNT(ID_karyawan) FROM `tb_karyawan` where status = 1 ");
   $jumlahDataKaryawanAktif = mysql_fetch_array($dataKaryawan);
